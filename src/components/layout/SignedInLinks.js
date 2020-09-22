@@ -14,7 +14,7 @@ function SignedInLinks(props) {
                 <a onClick={props.signOut} href="#">Log Out</a>
             </li>
             <li>
-                <NavLink to="/" className="btn btn-floating pink lighten-1">AC</NavLink>
+                <NavLink to="/" className="btn btn-floating pink lighten-1">{props.profile.initials}</NavLink>
             </li>
         </ul>
     );

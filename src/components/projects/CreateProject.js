@@ -14,6 +14,8 @@ class CreateProject extends Component {
         event.preventDefault();
 
         this.props.createProject(this.state);
+        // Then, redirect to home page
+        this.props.history.push("/");
     };
 
     handleChange = (event) => {

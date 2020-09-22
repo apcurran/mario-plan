@@ -4,6 +4,8 @@ import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 import { Redirect } from "react-router-dom";
 
+import formatDate from "../../utility/dateFormatter";
+
 function ProjectDetails(props) {
     const { project, auth } = props;
 
@@ -21,7 +23,7 @@ function ProjectDetails(props) {
                     </div>
                     <div className="card-action grey lighten-4 grey-text">
                         <h3>Posted by {project.authorFirstName} {project.authorLastName}</h3>
-                        <p>September 2, 2 PM</p>
+                        <p>{formatDate(project.createdAt.toDate())}</p>
                     </div>
                 </div>
             </div>
